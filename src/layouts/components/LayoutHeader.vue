@@ -6,7 +6,7 @@
         <p class="mt-7 text-md font-light text-gray">Customize components by yourself</p>
         <div class="flex items-center mt-2">
             <p class="text-md font-medium text-dark mr-2">v{{version}}</p>
-            <BaseButton iconLeft="mdi:github" iconSize="30" icon circle iconColor="#000000" />
+            <BaseButton iconLeft="mdi:github" iconSize="30" icon circle iconColor="#000000" to="https://github.com/mihairusu88/customize-me" />
         </div>
     </div>
 </template>

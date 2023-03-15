@@ -4,8 +4,6 @@ import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import svgLoader from 'vite-svg-loader';
 
-const isProduction = process.env.NODE_ENV && process.env.NODE_ENV === 'production';
-
 // https://vitejs.dev/config/
 export default defineConfig( {
     plugins: [ vue(), svgLoader( {
@@ -13,7 +11,6 @@ export default defineConfig( {
     } ) ],
     server: {
         port: 8080,
-        https: isProduction
     },
     preview: {
         port: 8081
@@ -43,7 +40,6 @@ export default defineConfig( {
                 `
             }
         }
-    },
-    base: !isProduction ? '/' : '/customize-me/'
+    }
 } );
 

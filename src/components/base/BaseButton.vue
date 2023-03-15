@@ -87,7 +87,7 @@ export default {
             default: false
         },
         to: {
-            type: Object,
+            type: [ Object, String ],
             default: null
         },
         active: {
@@ -109,9 +109,11 @@ export default {
 
         const onClickButtonDo = function( e ) {
             emit( 'click', e );
-            
+
+            console.log( 'here', typeof to.value );
+
             if ( to.value ) {
-                router.push( to.value );
+                typeof to.value === 'object' ? router.push( to.value ) : window.location.href = to.value;
             }
         };
 
